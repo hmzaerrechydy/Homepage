@@ -1,0 +1,47 @@
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+          <title>
+            Hamza Errechydy
+          </title>
+          <link rel="stylesheet" href="../style.css">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">  
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">            
+        </head>
+        <body>
+        <article id = "post">
+          <button  class="btn btn-light">
+            <a href="../blog.html">
+              <i class="bi bi-arrow-left"></i> Other Posts 
+            </a>
+          </button>
+          <br />
+          <h1>CS50 Week 07 SQL</h1>
+          <br/>
+            <p>Focus on learning the fundamentals so you can use any abstract tool easily.</p>
+<p><strong>Lambda functions</strong> are similar to user-defined functions but without a name. They're commonly referred to as anonymous functions. Lambda functions are efficient whenever you want to create a function that will only contain simple expressions – that is, expressions that are usually a single line of a statement.</p>
+<p><strong>Flat-file Databases</strong> are simple text files with data on them.</p>
+<h2 id="relationaldatabases">Relational Databases</h2>
+<p>Stores all of the data in columns and rows.</p>
+<p>SQL have 4 basic function: CRUD, Create, Read, Update and Delete data.</p>
+<p>You can do things in SQL in one line but in another language like Python you will need to write multiple lines to perform the same task, SQL is more powerful at dealing with data.</p>
+<h3 id="onetoonerelationship">One to one relationship</h3>
+<p>In a one-to-one relationship, one record in a table is associated with one and only one record in another table. For example, in a school database, each student has only one student ID, and each student ID is assigned to only one person.</p>
+<h3 id="onetomanyrelationship">One to many relationship</h3>
+<p>In a one-to-many relationship, one record in a table can be associated with one or more records in another table. For example, each customer can have many sales orders. In this example the primary key field in the Customers table, Customer ID, is designed to contain unique values.</p>
+<h3 id="primarykeyandforeignkey">Primary Key and Foreign Key</h3>
+<p>A Foreign Key is a key used to link two tables. The table with the Foreign Key Constraint (aka “child table”) is connected to another table (aka, the “parent table”). The connection is between the child table’s Foreign Key Constraint and the parent table’s Primary Key.</p>
+<p>Instead of duplicating data all over your database you can use foreign keys to refer to data in another table, for example let's say you have a store database, in one table your have the products, in another you have the sales, you can use foreign keys to refer to the products in the other table instead of duplicating the products names.</p>
+<p>You can nest SQL commands, for example you can run a command on the returned value from another command.</p>
+<p>B-Tree is like a binary tree, but a node can have more than 2 children nodes.</p>
+<h3 id="indexes">Indexes</h3>
+<p>Stores a chunk of the database in memory for faster access.</p>
+<p><strong>SQL injection attacks</strong>, when you wrote SQL code as input for example in a web form you can change the original SQL command to something else.</p>
+<p>That's why you should avoid using formatted strings when take input from user to complete a SQL command. Instead pass the input as an argument and use the ? mark because SQL libraries will ignore and treat those injections as normal text.</p>
+        </article>
+        </body>
+    </html>
+    

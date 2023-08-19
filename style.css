@@ -1,0 +1,36 @@
+body {
+    height: 100vh;
+    position: relative;
+    font-family: monospace !important; 
+}
+
+#contacts, .card, main {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+#homePagePicture{
+    max-width: 100%; 
+    height: auto;
+    border-radius: 15px;
+}
+
+a{
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+@media (max-width: 540px) { 
+    main{
+        z-index: -1;
+    }
+}
+
+article{
+    width: 80%;
+    margin: 0 auto;
+    padding: 3%;
+}

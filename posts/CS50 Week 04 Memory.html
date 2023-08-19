@@ -1,0 +1,69 @@
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+          <title>
+            Hamza Errechydy
+          </title>
+          <link rel="stylesheet" href="../style.css">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">  
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">            
+        </head>
+        <body>
+        <article id = "post">
+          <button  class="btn btn-light">
+            <a href="../blog.html">
+              <i class="bi bi-arrow-left"></i> Other Posts 
+            </a>
+          </button>
+          <br />
+          <h1>CS50 Week 04 Memory</h1>
+          <br/>
+            <h2 id="hexadecimal">Hexadecimal</h2>
+<p>It’s base 16 which means there’s 16 digits you can use to represent a number. </p>
+<p>0 to 9 plus A, B, C, D, E, F which equals 10, 11, 12, 13, 14 and 15. </p>
+<p>You can represent two digits, each represent a column, 1 and 16, so for example A under the 1 column is 10 and 1 under the 16 column is 16. </p>
+<p>FF is the highest value in this system: 16 * 15 + 15 * 1 = 255 </p>
+<p>The prefix 0x is used in code to indicate that the number is being written in hex.</p>
+<p>&amp; get you the address of a value in memory. </p>
+<p>A pointer is a variable that points to the address of another variable.  </p>
+<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2a31aff3-3fe5-460c-8507-d632e004e71c/Screenshot_from_2023-06-17_09-45-03.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230819%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230819T100113Z&X-Amz-Expires=3600&X-Amz-Signature=ef215fdbb62e0eef065346d11cf21cddd571960b24864501c2db99bd763b0751&X-Amz-SignedHeaders=host&x-id=GetObject" alt="Screenshot_from_2023-06-17_09-45-03.png" /></p>
+<p>A string variable is just a char pointer that refers to the address of the first char in a string and thanks to the null character we can follow the bread crumbs till we find the end of the string and get all the characters. </p>
+<pre><code class="c language-c">char *s = "Hello, world!"; 
+
+// [1] get the address of the first char 
+// [2] go to memory and find the address 
+// [3] access all values until the null character \0
+</code></pre>
+<p>Once you create a pointer you can get the value stored in the address you’re pointing at using *</p>
+<pre><code class="c language-c">char *name = "Hamza"; 
+int *p = &amp;name; // pointer 
+
+printf("My name is %c\n", *p); // access value in the pointer address  
+</code></pre>
+<p>You can do arithmetic with pointer, since a string is an array of character back to back, then the next character is plus 1 from the current character address. </p>
+<pre><code class="c language-c">char *fruit = "apple"; 
+char one = *fruit; 
+char two = *(fruit + 1); 
+
+printf("second chraceter in apple is : %c\n", two); // p 
+</code></pre>
+<p>The computer memory gives you a segment you can use if you try to pass to the rest of memory you will get an error. </p>
+<p><strong>malloc()</strong> is a function in C that let us use a chunk of memory by passing the number of bytes we need as an argument.  </p>
+<p>In design it’s not good to call a function inside a loop because it’s stupid to call the function in each iteration when you could called it once and store the returned value inside a variable. </p>
+<p>NULL pointer is a pointer that does not point to any memory location “an invalid memory location”. </p>
+<p>If you pass NULL to a variable it become a NULL pointer. </p>
+<p>NULL is useful for handling malloc() errors. </p>
+<p><strong>free()</strong> is a function we use to free the chunk of memory we have been using from malloc(). </p>
+<p>Any time you use malloc() you have to use free(). </p>
+<p>If you don’t initialize variables you will get <strong>garbage values</strong>, values from other programs that were running in that part of memory. </p>
+<p>When you pass values to a function, you are only providing copies.</p>
+<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d324fffe-c8f0-4928-b26d-128ee02e0334/Screenshot_from_2023-06-18_11-49-09.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230819%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230819T100113Z&X-Amz-Expires=3600&X-Amz-Signature=611d10bc14ea9d389464096c50b81d485e81cc00c22424f9e4b1304da29eef70&X-Amz-SignedHeaders=host&x-id=GetObject" alt="Screenshot_from_2023-06-18_11-49-09.png" /></p>
+<p>The heap is free available space in memory that we can use malloc() to use. </p>
+<p>The stack is the variables and arguments passed to a function. </p>
+        </article>
+        </body>
+    </html>
+    
